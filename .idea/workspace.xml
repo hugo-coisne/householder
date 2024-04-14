@@ -4,16 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ffdcfc78-864e-4080-9f1d-833ed11618c8" name="Changes" comment="idk">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dao/ItemDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/provider/DataSourceProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jdbc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ItemServiceTestCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="ffdcfc78-864e-4080-9f1d-833ed11618c8" name="Changes" comment="test dao">
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Item.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +35,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.ItemServiceTestCase.shouldGetItems.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -114,7 +107,7 @@
       <option name="presentableId" value="Default" />
       <updated>1713088667273</updated>
       <workItem from="1713088668348" duration="132000" />
-      <workItem from="1713088832236" duration="1893000" />
+      <workItem from="1713088832236" duration="2313000" />
     </task>
     <task id="LOCAL-00001" summary="init maven project">
       <option name="closed" value="true" />
@@ -156,7 +149,55 @@
       <option name="project" value="LOCAL" />
       <updated>1713089437490</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="idk">
+      <option name="closed" value="true" />
+      <created>1713090892024</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1713090892024</updated>
+    </task>
+    <task id="LOCAL-00007" summary="add mariadb and junit4 dependencies">
+      <option name="closed" value="true" />
+      <created>1713090924732</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1713090924732</updated>
+    </task>
+    <task id="LOCAL-00008" summary="create DataSourceProvider">
+      <option name="closed" value="true" />
+      <created>1713090934989</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1713090934989</updated>
+    </task>
+    <task id="LOCAL-00009" summary="set jdbc properties">
+      <option name="closed" value="true" />
+      <created>1713090946858</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1713090946858</updated>
+    </task>
+    <task id="LOCAL-00010" summary="create basic item dao">
+      <option name="closed" value="true" />
+      <created>1713090958288</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1713090958288</updated>
+    </task>
+    <task id="LOCAL-00011" summary="test dao">
+      <option name="closed" value="true" />
+      <created>1713090966050</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1713090966050</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,6 +208,11 @@
     <MESSAGE value="update correct gitignore" />
     <MESSAGE value="create item entity" />
     <MESSAGE value="idk" />
-    <option name="LAST_COMMIT_MESSAGE" value="idk" />
+    <MESSAGE value="add mariadb and junit4 dependencies" />
+    <MESSAGE value="create DataSourceProvider" />
+    <MESSAGE value="set jdbc properties" />
+    <MESSAGE value="create basic item dao" />
+    <MESSAGE value="test dao" />
+    <option name="LAST_COMMIT_MESSAGE" value="test dao" />
   </component>
 </project>
