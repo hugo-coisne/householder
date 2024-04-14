@@ -1,5 +1,7 @@
 package entity;
 
+import java.util.Arrays;
+
 public class Item {
     private int id;
     private String name;
@@ -14,6 +16,11 @@ public class Item {
         this.parentId = parentId;
         this.quantity = quantity;
         this.unit = unit;
+    }
+
+    @Override
+    public String toString() {
+        return "Item(id="+id+",name="+name+",picture=..."+",parentId="+parentId+",quantity="+quantity+",unit="+unit+")";
     }
 
     public int getId() {
