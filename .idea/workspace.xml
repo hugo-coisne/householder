@@ -4,14 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ffdcfc78-864e-4080-9f1d-833ed11618c8" name="Changes" comment="update correct gitignore">
+    <list default="true" id="ffdcfc78-864e-4080-9f1d-833ed11618c8" name="Changes" comment="idk">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/dao/ItemDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entity/Item.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/provider/DataSourceProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/jdbc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ItemServiceTestCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -31,17 +45,40 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/coisn/Documents/code/householder/src/main/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mariadb"
+    ]
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\coisn\Documents\code\householder\src\main\resources" />
+      <recent name="C:\Users\coisn\Documents\code\householder\src\main\java" />
+    </key>
+  </component>
   <component name="RunManager">
+    <configuration name="ItemServiceTestCase.shouldGetItems" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="untitled" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ItemServiceTestCase" />
+      <option name="METHOD_NAME" value="shouldGetItems" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="householder" />
       <method v="2">
@@ -55,6 +92,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ItemServiceTestCase.shouldGetItems" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -72,7 +114,7 @@
       <option name="presentableId" value="Default" />
       <updated>1713088667273</updated>
       <workItem from="1713088668348" duration="132000" />
-      <workItem from="1713088832236" duration="404000" />
+      <workItem from="1713088832236" duration="1893000" />
     </task>
     <task id="LOCAL-00001" summary="init maven project">
       <option name="closed" value="true" />
@@ -98,7 +140,23 @@
       <option name="project" value="LOCAL" />
       <updated>1713089156341</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="create item entity">
+      <option name="closed" value="true" />
+      <created>1713089418956</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1713089418956</updated>
+    </task>
+    <task id="LOCAL-00005" summary="idk">
+      <option name="closed" value="true" />
+      <created>1713089437490</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1713089437490</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -106,8 +164,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init maven project" />
-    <MESSAGE value="idk" />
     <MESSAGE value="update correct gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="update correct gitignore" />
+    <MESSAGE value="create item entity" />
+    <MESSAGE value="idk" />
+    <option name="LAST_COMMIT_MESSAGE" value="idk" />
   </component>
 </project>
