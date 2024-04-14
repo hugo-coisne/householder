@@ -5,7 +5,7 @@ import org.junit.Test;
 import java.util.List;
 
 public class ItemServiceTestCase {
-    ItemDao itemDao = new ItemDao();
+    ItemDao itemDao = ItemDao.getInstance();
     @Test
     public void shouldGetItems(){
         List<Item> items = itemDao.getItems();

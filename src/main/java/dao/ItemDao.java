@@ -12,7 +12,7 @@ import java.util.List;
 
 public class ItemDao {
     private static ItemDao instance;
-    private static ItemDao getInstance(){
+    public static ItemDao getInstance(){
         if(instance==null){
             instance = new ItemDao();
         }
