@@ -2,11 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/style.css">
     <title>Items</title>
 </head>
 <body>
-<div th:each="item: ${items}">
-    <div th:text="${item.getName()+' '+item.getQuantity()}"></div>
-</div>
+    <table>
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>Quantity</td>
+                <td>Unit</td>
+                <td>Id</td>
+                <!--<td>Parent Id</td>-->
+            </tr>
+        </thead>
+        <tr th:each="item: ${items}">
+            <td th:text="${item.getName()}"></td>
+            <td th:text="${#strings.arraySplit(item.getQuantity(),'.')[1]==0 ? #strings.arraySplit(item.getQuantity(),'.')[0] : item.getQuantity()}"></td>
+            <td th:text="${item.getUnit()}"></td>
+            <td th:text="${item.getId()}"></td>
+            <!--<td th:text="${item.getParentId()==0 ? '' : item.getParentId()}"></td>-->
+        </tr>
+    </table>
 </body>
 </html>
