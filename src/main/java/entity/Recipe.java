@@ -3,19 +3,19 @@ package entity;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Receipe {
+public class Recipe {
     private int id;
     private String name;
     private String description;
     private List<Item> ingredients = new ArrayList<>();
-    public Receipe(int id, String name){
+    public Recipe(int id, String name){
         this.id = id;
         this.name = name;
     }
 
     @Override
     public String toString() {
-        return "Receipe(" +
+        return "recipe(" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +

@@ -1,34 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/css/style.css">
-    <title>Items</title>
+    <script src="/js/script.js" defer></script>
+    <title>Tableau de bord</title>
 </head>
 <body>
-<table>
-    <thead>
-    <tr>
-        <td>Name</td>
-        <td>Quantity</td>
-        <td>Unit</td>
-        <td>Id</td>
-        <!--<td>Parent Id</td>-->
-    </tr>
-    </thead>
-    <tr th:each="item: ${items}">
-        <td th:text="${item.getName()}"></td>
-        <td th:text="${#strings.arraySplit(item.getQuantity(),'.')[1]==0 ? #strings.arraySplit(item.getQuantity(),'.')[0] : item.getQuantity()}"></td>
-        <td th:text="${item.getUnit()}"></td>
-        <td th:text="${item.getId()}"></td>
-        <!--<td th:text="${item.getParentId()==0 ? '' : item.getParentId()}"></td>-->
-    </tr>
-</table>
 <div>
-    <table th:each="receipe : ${receipes}" th:id="${receipe.getId()}">
+    <h2>Garde-manger</h2>
+    <table>
         <thead>
-        <tr th:text="${receipe.getName()}"></tr>
-        
         <tr>
             <td>Name</td>
             <td>Quantity</td>
@@ -37,11 +19,48 @@
             <!--<td>Parent Id</td>-->
         </tr>
         </thead>
-        <tr th:each="ingredient : ${receipe.getIngredients()}">
-            <td th:text="${ingredient.getName()}"></td>
-            <td th:text="${#strings.arraySplit(ingredient.getQuantity(),'.')[1]==0 ? #strings.arraySplit(ingredient.getQuantity(),'.')[0] : ingredient.getQuantity()}"></td>
-            <td th:text="${ingredient.getUnit()}"></td>
-            <td th:text="${ingredient.getId()}"></td>
+        <tr th:each="item: ${items}" editable="true">
+            <td th:text="${item.getName()}" th:initialValue="${item.getName()}"></td>
+            <td th:text="${#strings.arraySplit(item.getQuantity(),'.')[1]==0 ? #strings.arraySplit(item.getQuantity(),'.')[0] : item.getQuantity()}"
+                th:initialValue="${#strings.arraySplit(item.getQuantity(),'.')[1]==0 ? #strings.arraySplit(item.getQuantity(),'.')[0] : item.getQuantity()}"></td>
+            <td th:text="${item.getUnit()}"
+                th:initialValue="${item.getUnit()}"></td>
+            <td th:text="${item.getId()}"
+                th:initialValue="${item.getId()}"></td>
+            <!--<td th:text="${item.getParentId()==0 ? '' : item.getParentId()}"></td>-->
+        </tr>
+    </table>
+</div>
+<div>
+    <h2>Recettes</h2>
+    <div th:each="recipe : ${recipes}">
+        <input type="radio"
+               name="recipe"
+               th:id="${recipe.getId()}">
+        <label th:for="${recipe.getId()}" th:text="${recipe.getName()}"></label>
+    </div>
+</div>
+<div id="recipes">
+    <h2>Ingredients de la recette</h2>
+    <table th:each="recipe : ${recipes}" th:id="${recipe.getId()}" hidden="true">
+        <thead>
+        <tr>
+            <td>Libellé</td>
+            <td>Quantité</td>
+            <td>Unité</td>
+            <td>Id</td>
+            <!--<td>Parent Id</td>-->
+        </tr>
+        </thead>
+        <tr th:each="ingredient : ${recipe.getIngredients()}" editable="true">
+            <td th:text="${ingredient.getName()}"
+                th:initialValue="${ingredient.getName()}"></td>
+            <td th:text="${#strings.arraySplit(ingredient.getQuantity(),'.')[1]==0 ? #strings.arraySplit(ingredient.getQuantity(),'.')[0] : ingredient.getQuantity()}"
+                th:initialValue="${#strings.arraySplit(ingredient.getQuantity(),'.')[1]==0 ? #strings.arraySplit(ingredient.getQuantity(),'.')[0] : ingredient.getQuantity()}"></td>
+            <td th:text="${ingredient.getUnit()}"
+                th:initialValue="${ingredient.getUnit()}"></td>
+            <td th:text="${ingredient.getId()}"
+                th:initialValue="${ingredient.getId()}"></td>
             <!--<td th:text="${item.getParentId()==0 ? '' : item.getParentId()}"></td>-->
         </tr>
     </table>
