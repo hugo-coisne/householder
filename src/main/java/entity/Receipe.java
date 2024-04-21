@@ -1,17 +1,26 @@
 package entity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Receipe {
     private int id;
     private String name;
     private String description;
-    private List<Item> ingredients;
-    public Receipe(int id, String name, String description, List<Item> ingredients){
+    private List<Item> ingredients = new ArrayList<>();
+    public Receipe(int id, String name){
         this.id = id;
         this.name = name;
-        this.description = description;
-        this.ingredients = ingredients;
+    }
+
+    @Override
+    public String toString() {
+        return "Receipe(" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", ingredients=" + ingredients +
+                ')';
     }
 
     public String getDescription() {
