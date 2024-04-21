@@ -18,9 +18,16 @@ public class Item {
         this.unit = unit;
     }
 
+    public Item(int id, String name,float quantity, String unit){
+        this.id = id;
+        this.name = name;
+        this.quantity = quantity;
+        this.unit = unit;
+    }
+
     @Override
     public String toString() {
-        return "Item(id="+id+",name='"+name+"',picture=..."+",parentId="+parentId+",quantity="+quantity+",unit='"+unit+"')";
+        return "Item(id="+id+",name='"+name+"',picture=..."+",parentId="+parentId+",quantity="+quantity+",unit='"+unit+"')\n";
     }
 
     public int getId() {
