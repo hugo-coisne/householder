@@ -11,13 +11,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ItemDao {
+
     private static ItemDao instance;
+
     public static ItemDao getInstance(){
         if(instance==null){
             instance = new ItemDao();
         }
         return instance;
     }
+
     private Item extractItem(ResultSet result) throws SQLException {
         int id = result.getInt("id");
         String name = result.getString("name");
@@ -27,6 +30,7 @@ public class ItemDao {
         String unit = result.getNString("unit");
         return new Item(id,name,picture,parentId,quantity,unit);
     }
+
     public List<Item> getItems(){
         List<Item> items = new ArrayList<>();
         try{
