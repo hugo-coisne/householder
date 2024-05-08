@@ -1,0 +1,23 @@
+version: '3.9'
+volumes:
+  data:
+services:
+  householder-database:
+    container_name: householder-database
+    image: mariadb
+    environment:
+      MARIADB_DATABASE: householder
+      MARIADB_ROOT_PASSWORD: root
+    volumes:
+      - ./Docker/database/sql:/docker-entrypoint-initdb.d
+    ports:
+      - "3306:3306"
+  householder-webapp:
+    container_name: householder-webapp
+    image: householder-webapp
+    depends_on:
+      - householder-database
+    volumes:
+      - ./Docker/webapp/properties/jdbc.properties:/usr/local/tomcat/webapps/ROOT/WEB-INF/classes/jdbc.properties
+    ports:
+      - "8888:8080"
