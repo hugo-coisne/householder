@@ -20,4 +20,4 @@ services:
     volumes:
       - ./Docker/webapp/properties/jdbc.properties:/usr/local/tomcat/webapps/ROOT/WEB-INF/classes/jdbc.properties
     ports:
-      - "8888:8080"
+      - "80:8080"
